@@ -1,0 +1,227 @@
+<html>
+	<head>
+  <script type="text/javascript">
+    function populate(s1,s2){
+      var s1 = document.getElementById(s1);
+      var s2 = document.getElementById(s2);
+      s2.innerHTML = "";
+      if(s1.value == "FT"){
+        var optionArray = ["|",
+                          "Teknik Komputer|Teknik Komputer",
+                          "Teknik Kimia|Teknik Kimia",
+                          "Teknik Sipil|Teknik Sipil",
+                          "Teknik Geologi|Teknik Geologi",
+                          "Teknik Geodesi|Teknik Geodesi",
+                          "Teknik Mesin|Teknik Mesin",
+                          "Teknik Elektro|Teknik Elektro",
+                          "Teknik Perkapalan|Teknik Perkapalan",
+                          "Teknik Industri|Teknik Industri",
+                          "Teknik Lingkungan|Teknik Lingkungan",
+                          "Perencanaan Wilayah dan Kota|Perencanaan Wilayah dan Kota",
+                          "Arsitektur|Arsitektur"];
+      } else if(s1.value == "FK"){
+        var optionArray = ["|",
+                          "Kedokteran Umum|Kedokteran",
+                          "Ilmu Gizi|Ilmu Gizi",
+                          "Keperawatan|Ilmu Keperawatan"];
+      } else if(s1.value == "FKM"){
+        var optionArray = ["|",
+                          "Kesehatan Masyarakat|Kesehatan Masyarakat"];
+      } else if(s1.value == "FPP"){
+        var optionArray = ["|",
+                          "Peternakan|Peternakan",
+                          "Agribisnis|Agribisnis",
+                          "Agroteknologi|Agroteknologi",
+                          "Teknologi Pangan|Teknologi Pangan"];
+      } else if(s1.value == "FH"){
+        var optionArray = ["|",
+                          "Ilmu Hukum|Ilmu Hukum"];
+      } else if(s1.value == "FSM"){
+        var optionArray = ["|",
+                          "Matematika|Matematika",
+                          "Kimia|Kimia",
+                          "Fisika|Fisika",
+                          "Statistika|Statistika",
+                          "Informatika|Informatika"];
+      } else if(s1.value == "FPsi"){
+        var optionArray = ["|",
+                          "Psikologi|Psikologi"];
+      } else if(s1.value == "FPIK"){
+        var optionArray = ["|",
+                          "Budidaya Perairan|Budidaya Perairan",
+                          "Manajemen Sumber Daya Perairan|Manajemen Sumber Daya Perairan",
+                          "Pemanfaat Sumber Daya Perikanan|Pemanfaat Sumber Daya Perikanan",
+                          "Teknologi Hasil Perikanan|Teknologi Hasil Perikanan",
+                          "oseanografi|Oseanografi",
+                        "ilmu kelautan|Ilmu Kelautan"];
+      } else if(s1.value == "FEB"){
+        var optionArray = ["|",
+                          "Manajemen|Manajemen",
+                          "Akuntansi|Akuntansi",
+                          "Ekonomi Sembangunan|Ekonomi Pembangunan",
+                          "Ekonomi Islam|Ekonomi Islam"];
+      } else if(s1.value == "FIB"){
+        var optionArray = ["|",
+                          "Sastra Inggris|Sastra Inggris",
+                          "Sastra Indonesia|Sastra Indonesia",
+                          "Ilmu Sejarah|Ilmu Sejarah",
+                          "Ilmu Perpustakaan|Ilmu Perpustakaan"];
+      } else if(s1.value == "SV"){
+        var optionArray = ["|",
+                          "D3 Teknik Kimia|D3 Teknik Kimia",
+                          "D3 Teknik Elektro|D3 Teknik Elektro",
+                          "D3 Teknik Mesin|D3 Teknik Mesin",
+                          "D3 Teknik Perkapalan|D3 Teknik Perkapalan",
+                          "D3 Instrumentasi Elektronika|D3 Instrumentasi Elektronika",
+                          "D3 Teknik Sipil|D3 Teknik Sipil",
+                          "D3 Perencanaan Wilayah dan Kota|D3 Perencanaan Wilayah dan Kota",
+                          "D3 Desain Arsitektur|D3 Desain Arsitektur",
+                          "D3 Pertanahan|D3 Pertanahan",
+                          "D3 Manajemen Perusahaan|D3 Manajemen Perusahaan",
+                          "D3 Perpajakan|D3 Perpajakan",
+                          "D3 Akuntansi|D3 Akuntansi",
+                          "D3 Manajemen Usaha Peternakan|D3 Manajemen Usaha Peternakan",
+                          "D3 Administrasi Perkantoran|D3 Administrasi Perkantoran",
+                          "D3 Manajemen Pemasaran|D3 Manajemen Pemasaran",
+                          "D3 Keuangan Daerah|D3 Keuangan Daerah",
+                          "D3 Perpustakaan dan Informasi|D3 Perpustakaan dan Informasi",
+                          "D3 Kearsipan|D3 Kearsipan",
+                          "D3 Bahasa Inggris|D3 Bahasa Inggris",
+                          "D3 Bahasa Jepang|D3 Bahasa Jepang",
+                          "D3 Hubungan Masyarakat|D3 Hubungan Masyarakat"];
+      } else if(s1.value == "FISIP"){
+        var optionArray = ["|",
+                          "Administrasi Bisnis|Administrasi Bisnis",
+                          "Ilmu Komunikasi|Ilmu Komunikasi",
+                          "Administrasi Publik|Administrasi Publik",
+                          "Ilmu Pemerintahan|Ilmu Pemerintahan",
+                          "Hubungan Internasional|Hubungan Internasional"];
+      }
+      for(var option in optionArray){
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+      }
+    }
+  </script>
+		<title>
+			Form Data Mahasiswa
+		
+		<</title>
+		<style type="text/css">
+			body{
+				margin:0px;
+				padding:0px;
+				}		
+			.header{
+				widht:100%;
+				height:40px;
+				background-color:gray;
+				color:white;
+				font-size:20px;
+				font-weight:bold;
+				text-align:center;
+				line-height:40px;
+				font-family:century gothic;	
+				}
+			.content{
+				width:100%;
+				height:auto;
+				border:2px solid;
+				padding-top:20px;
+				padding-bottom:20px;
+				font-family:century gothic;
+			}
+			.footer {
+				width:100%;
+				background-color:gray;
+				height:40px;
+				color:white;
+				text-align:center;
+				font-size:15px;
+				line-height:40px;
+				font-family:century gothic;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			TAMBAH DATA MAHASISWA
+		</div>
+		
+		<div class="content">
+			<table align="center">
+				<tr>
+					<td>NIM</td>
+					<td>:</td>
+					<td><input type="text"placeholder="Masukkan NIM Anda.." /> </td>
+				</tr>
+				<tr>
+					<td>NAMA</td>
+					<td>:</td>
+					<td><input type="text"placeholder="Masukkan NAMA Anda.." /> </td>
+				</tr>
+				<tr>
+					<td>ALAMAT</td>
+					<td>:</td>
+					<td><input type="text"placeholder="Masukkan Alamat Anda.." /> </td>
+				</tr>
+				<tr>
+					<td>KOTA ASAL</td>
+					<td>:</td>
+					<td><input type="text"placeholder="Masukkan Kota Asal Anda.." /> </td>
+				</tr>
+				<tr>
+					<td>FAKULTAS</td>
+					<td>&nbsp</td>
+					<td><select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+						<option value=""></option>
+						<option value="FT">Fakultas Teknik</option>
+						<option value="FK">Fakultas Kedokteran</option>
+						<option value="FKM">Fakultas Kesehatan Masyarakat</option>
+						<option value="FPP">Fakultas Peternakan dan Pertanian</option>
+						<option value="FH">Fakultas Hukum</option>
+						<option value="FSM">Fakultas Sains dan Matematika</option>
+						<option value="FPsi">Fakultas Psikologi</option>
+						<option value="FPIK">Fakultas Perikanan dan Ilmu Kelautan</option>
+						<option value="FEB">Fakultas Ekonomi dan Bisnis</option>
+						<option value="FIB">Fakultas Ilmu dan Budaya</option>
+						<option value="SV">Sekolah Vokasi</option>
+						<option value="FISIP">Fakultas Ilmu Sosial dan Ilmu Politik</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>JURUSAN</td>
+					<td>:</td>
+					<td> <select id="slct2" name="slct2"></select></td>				
+				<tr>
+					<td>TANGGAL LAHIR</td>
+					<td><label for="tgl">
+					<td><input type="date" name=tgl/>
+					</td>
+				</tr>
+				<tr>
+					<td>JENIS KELAMIN</td>
+					<td>:</td>
+					<td>
+						<label> Laki - Laki </label>
+							<input name="option" type="radio">
+						<label> Perempuan	 </label>
+							<input name="option"type="radio">
+					</td>						
+				</tr>				
+				<tr>
+					<td><input type="submit" value="SIMPAN" ></td>
+					<td>&nbsp</td>	
+					<td><input type="submit" value="SELESAI" ></td>
+				</tr>			
+			</table>
+		</div>
+
+		<div class="footer">
+			Ara Fasaka | 21120117140014 | PPB B
+		</div>		
+	</body>
+</html>
